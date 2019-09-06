@@ -425,7 +425,7 @@ abstract class Application
         }
 
         $uri = sprintf('%s/%s', $object::getResourceURI(), $object->getGUID());
-        $url = new URL($this, $uri);
+        $url = new URL($this, $uri, $api);
         $request = new Request($this, $url, Request::METHOD_DELETE);
         $response = $request->send();
 
